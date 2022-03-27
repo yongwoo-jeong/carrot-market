@@ -2,13 +2,25 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
+    <form className="flex flex-col space-y-5 bg-blue-500 p-5 focus-within:bg-blue-100">
+      <input
+        type="text"
+        required
+        placeholder="Username"
+        className="required:border-2 border-yellow-500"
+      />
+      <input type="text" required placeholder="Password" />
+      <input type="submit" value="Login" className="bg-white" />
+    </form>
+    /*     <div className="bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
       <div className="bg-white p-6 rounded-3xl shadow-2xl">
         <span className="font-semibold text-3xl">Select Item</span>
-        <div className="flex justify-between my-2">
-          <span className="text-gray-500">Grey Chair</span>
-          <span className="font-semibold">$19</span>
-        </div>
+        {[1, 2, 3, 4, 5].map((i) => (
+          <div key={i} className="flex justify-between my-2">
+            <span className="text-gray-500">Grey Chair</span>
+            <span className="font-semibold">$19</span>
+          </div>
+        ))}
         <div className="flex justify-between">
           <span className="text-gray-500">Tooly Table</span>
           <span className="font-semibold">$19</span>
@@ -28,13 +40,13 @@ const Home: NextPage = () => {
         <div className="bg-blue-500 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
-        <div className="rounded-3xl p-6 bg-white relative -top-5">
+        <div className="rounded-3xl p-6 bg-white relative -top-5 group">
           <div className="flex items-end relative -top-16 justify-between">
             <div className="flex flex-col items-center ">
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">$340</span>
             </div>
-            <div className="h-24 w-24 bg-red-400 rounded-full" />
+            <div className="h-24 w-24 bg-yellow-200 rounded-full group-hover:bg-red-400 transition-colors " />
             <div className="flex flex-col items-center ">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$2410</span>
@@ -82,7 +94,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> */
   );
 };
 
