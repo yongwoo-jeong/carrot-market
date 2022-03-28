@@ -2,25 +2,13 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <form className="flex flex-col space-y-5 bg-blue-500 p-5 focus-within:bg-blue-100">
-      <input
-        type="text"
-        required
-        placeholder="Username"
-        className="required:border-2 border-yellow-500"
-      />
-      <input type="text" required placeholder="Password" />
-      <input type="submit" value="Login" className="bg-white" />
-    </form>
-    /*     <div className="bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
+    <div className="bg-slate-400 py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 xl:place-content-center min-h-screen">
       <div className="bg-white p-6 rounded-3xl shadow-2xl">
         <span className="font-semibold text-3xl">Select Item</span>
-        {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="flex justify-between my-2">
-            <span className="text-gray-500">Grey Chair</span>
-            <span className="font-semibold">$19</span>
-          </div>
-        ))}
+        <div className="flex justify-between my-2">
+          <span className="text-gray-500">Grey Chair</span>
+          <span className="font-semibold">$19</span>
+        </div>
         <div className="flex justify-between">
           <span className="text-gray-500">Tooly Table</span>
           <span className="font-semibold">$19</span>
@@ -58,7 +46,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-6 rounded-3xl shadow-2xl">
+      <div className="bg-white p-6 rounded-3xl shadow-2xl lg:col-span-2 xl:col-span-1">
         <div className="flex justify-between items-center">
           <span>⬅</span>
           <div className="space-x-3">
@@ -94,7 +82,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-    </div> */
+    </div>
   );
 };
 
