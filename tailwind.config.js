@@ -4,6 +4,7 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    darkMode: "media", // class
     extend: {},
   },
   plugins: [],
