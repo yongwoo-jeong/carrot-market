@@ -9,15 +9,15 @@ export default function Enter() {
   const onEmailClick = () => setMethod("email");
   const onPhoneClick = () => setMethod("phone");
   return (
-    <div className="mt-16">
-      <h3 className="text-3xl font-bold text-center">Enter to Carrot</h3>
+    <div className="mt-16 px-4">
+      <h3 className="text-center text-3xl font-bold">Enter to Carrot</h3>
       <div className="mt-8x">
         <div className="flex flex-col items-center">
-          <h5 className="text-sm text-gray-500 font-medium">Enter using:</h5>
-          <div className=" grid grid-cols-2 border-b w-full gap-16">
+          <h5 className="text-sm font-medium text-gray-500">Enter using:</h5>
+          <div className=" grid w-full grid-cols-2 gap-16 border-b">
             <button
               className={cls(
-                "pb-4 border-b-2 font-medium",
+                "border-b-2 pb-4 font-medium",
                 method === "email"
                   ? " border-orange-500 text-orange-500"
                   : "border-transparent text-gray-400"
@@ -28,7 +28,7 @@ export default function Enter() {
             </button>
             <button
               className={cls(
-                "pb-4 border-b-2 font-medium",
+                "border-b-2 pb-4 font-medium",
                 method === "phone"
                   ? " border-orange-500 text-orange-500"
                   : "border-transparent text-gray-400"
@@ -39,13 +39,19 @@ export default function Enter() {
             </button>
           </div>
         </div>
-        <form>
-          <label>
+        <form className="mt-8 flex flex-col">
+          <label className="text-sm font-medium text-gray-700">
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
           </label>
-          <div>
-            {method === "email" ? <input type="email" required /> : null}
+          <div className="mt-1">
+            {method === "email" ? (
+              <input
+                type="email"
+                className="w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-orange-500 focus:outline-none focus:ring-orange-500"
+                required
+              />
+            ) : null}
             {method === "phone" ? (
               <div>
                 <span>+82</span>
@@ -53,7 +59,7 @@ export default function Enter() {
               </div>
             ) : null}
           </div>
-          <button>
+          <button className="mt-5 rounded-md border border-transparent bg-orange-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
             {method === "email" ? "Get login link" : null}
             {method === "phone" ? "Get one-time password" : null}
           </button>
@@ -68,7 +74,7 @@ export default function Enter() {
           <div>
             <button>
               <svg
-                className="w-5 h-5"
+                className="h-5 w-5"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -78,7 +84,7 @@ export default function Enter() {
             </button>
             <button>
               <svg
-                className="w-5 h-5"
+                className="h-5 w-5"
                 aria-hidden="true"
                 fill="currentColor"
                 viewBox="0 0 20 20"
