@@ -28,7 +28,9 @@ const ItemDetail: NextPage = () => {
             motherfucker to get shot. You understand?
           </p>
           <div>
-            <button>Talk to seller</button>
+            <button className="flex items-center justify-between">
+              Talk to seller
+            </button>
             <button>
               <svg
                 className="h-6 w-6 "
