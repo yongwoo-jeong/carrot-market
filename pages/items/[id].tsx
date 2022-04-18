@@ -27,11 +27,11 @@ const ItemDetail: NextPage = () => {
             and that ni**a Winston or anybody else is in there, you the first
             motherfucker to get shot. You understand?
           </p>
-          <div>
-            <button className="flex items-center justify-between">
+          <div className="flex items-center justify-between">
+            <button className="flex-1 rounded-md bg-orange-500 py-3 font-medium text-white hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
               Talk to seller
             </button>
-            <button>
+            <button className="flex items-center justify-center py-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
               <svg
                 className="h-6 w-6 "
                 xmlns="http://www.w3.org/2000/svg"
