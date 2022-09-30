@@ -44,7 +44,7 @@ const Enter: NextPage = () => {
             {method === "email" ? "Email address" : null}
             {method === "phone" ? "Phone number" : null}
           </label>
-          <div className="mt-2">
+          <div className="mt-1">
             {method === "email" ? (
               <input
                 id="input"
