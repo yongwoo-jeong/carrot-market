@@ -1,4 +1,6 @@
+import { route } from "next/dist/server/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { cls } from "../libs/utils";
 
@@ -15,9 +17,19 @@ export default function Layout({
   hasTabBar,
   children,
 }: LayoutProps) {
+  const router = useRouter();
+  const onClick = () => {
+    router.back();
+  };
   return (
     <div>
-      <div className="fixed top-0 flex w-full max-w-xl items-center justify-center border-b bg-white py-3 text-lg font-medium text-gray-800">
+      <div
+        className={cls(
+          !canGoBack ? " justify-center" : "",
+          "fixed top-0 flex w-full max-w-xl items-center border-b bg-white px-10 py-3 text-lg font-medium text-gray-800 "
+        )}
+      >
+        {canGoBack ? <button onClick={onClick}>&larr;</button> : null}
         {title ? <span>{title}</span> : null}
       </div>
       <div className={cls("pt-14", hasTabBar ? "pb-24" : "")}>{children}</div>
