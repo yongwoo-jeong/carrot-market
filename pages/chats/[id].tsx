@@ -3,8 +3,8 @@ import Layout from "../../components/layout";
 
 const ChatDetail: NextPage = () => {
   return (
-    <Layout canGoBack>
-      <div className="space-y-4 py-10 px-4">
+    <Layout canGoBack title="Steve">
+      <div className="space-y-4 py-6 px-4 pb-16">
         <div className="flex items-start space-x-2">
           <div className="h-8 w-8 rounded-full bg-slate-400" />
           <div className="w-1/2 rounded-md border border-gray-300 p-2 text-sm text-gray-700">
