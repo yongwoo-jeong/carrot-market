@@ -5,6 +5,7 @@ interface TextAreaProps {
 }
 
 export default function TextArea({ label, name, ...rest }: TextAreaProps) {
+  console.log(rest);
   return (
     <div>
       {label ? (
